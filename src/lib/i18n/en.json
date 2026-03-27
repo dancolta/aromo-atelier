@@ -1,0 +1,87 @@
+{
+  "nav": { "shop": "Shop", "about": "About", "contact": "Contact" },
+  "hero": {
+    "tagline": "Artisan Perfumery",
+    "headline1": "The invisible art",
+    "headline2": "of aroma",
+    "subtitle_lines": [
+      "Artisan perfumes. Diffusers. Candles.",
+      "Each composition brought to life from rare ingredients",
+      "and the intuition of a France-trained perfumer."
+    ],
+    "cta_discover": "Discover",
+    "cta_story": "Our Story"
+  },
+  "marquee": ["Oud", "Saffron", "Iris", "Amber", "Vetiver", "Neroli", "Rose", "Sandalwood", "Fig Leaf", "Labdanum", "Tonka", "Bergamot"],
+  "collection": {
+    "label": "The Collection",
+    "heading1": "Unique compositions.",
+    "heading2": "Born from passion.",
+    "view_all": "View full collection",
+    "view_all_mobile": "View full collection"
+  },
+  "manifesto": {
+    "quote_lines": ["Every scent is made by one pair of hands.", "Here fragrance becomes story."],
+    "brand": "Aromo Atelier"
+  },
+  "atelier": {
+    "label": "The Atelier",
+    "heading1": "Where raw materials",
+    "heading2": "become memory",
+    "text": "In a quiet studio in central Chișinău, every fragrance is composed by hand, from first sketch to final bottle. No factory lines. No shortcuts. Just patience, intuition, and extraordinary ingredients.",
+    "cta": "Read Our Story",
+    "appointment": "Visits by appointment only"
+  },
+  "shop": {
+    "label": "The Collection",
+    "heading": "Our Creations",
+    "back": "← Back to Collection",
+    "category_parfum": "Eau de Parfum",
+    "category_diffuser": "Diffuser",
+    "category_candle": "Candle",
+    "key_notes": "Key Notes",
+    "add_to_cart": "Add to Cart"
+  },
+  "about": {
+    "label": "The Perfumer",
+    "heading1": "An artist of",
+    "heading2": "aromatic molecules",
+    "text1": "In a quiet atelier in Chișinău, raw materials become memories. Elena studied the art of perfumery in France, and each creation begins as an intuition: a fleeting image, a half-remembered place, a texture of light. And is slowly composed into something you can wear on your skin.",
+    "text2": "Aromo Atelier was born from the belief that perfumery is an intimate art, not an industry. Every bottle is handcrafted in small batches, using carefully sourced ingredients from growers and distillers who share our reverence for the natural world.",
+    "text3": "There are no mass campaigns here. No celebrity endorsements. Just a perfumer, a collection of extraordinary materials, and the patience to let each composition find its own truth.",
+    "location": "Chișinău, Moldova",
+    "appointment": "Visits by appointment only"
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "heading": "Write to Us",
+    "subtitle": "For custom blends, collaborations, or simply to get to know us.",
+    "address_label": "Address",
+    "address": "Str. Alexei Șciusev 64, Chișinău",
+    "appointment": "Visits by appointment only",
+    "email_label": "Email",
+    "email": "contact@aromo.md",
+    "phone_label": "Phone",
+    "phone": "+373 XX XXX XXX",
+    "form_name": "Name",
+    "form_name_placeholder": "Your name",
+    "form_email": "Email",
+    "form_email_placeholder": "your@email.com",
+    "form_message": "Message",
+    "form_message_placeholder": "Tell us about your vision...",
+    "form_submit": "Send Message",
+    "success_title": "Thank you.",
+    "success_text": "We'll be in touch soon."
+  },
+  "footer": { "copyright": "© 2026 Aromo Atelier · Chișinău, Moldova" },
+  "products": {
+    "fleur-sauvage": { "subtitle": "Wild Iris · Violet Leaf · Musk", "notes": "Delicate, earthy, free-spirited", "description": "Wildflowers gathered at dawn, still heavy with dew. Iris petals unfold into a bed of violet leaves and clean musk. An ode to untamed beauty.", "ingredients": ["Wild Iris", "Violet Leaf", "White Musk", "Green Stem Accord", "Ambrette"] },
+    "noir-de-chisinau": { "subtitle": "Oud · Amber · Tobacco Leaf", "notes": "Deep, smoky, contemplative", "description": "A midnight walk through the old quarter. Dark oud meets sun-dried tobacco, softened by a warm amber embrace. For those who carry mystery like a second skin.", "ingredients": ["Oud", "Amber", "Tobacco Leaf", "Benzoin", "Black Pepper"] },
+    "lumiere-doree": { "subtitle": "Saffron · Honey · Sandalwood", "notes": "Warm, golden, enveloping", "description": "Golden hour, captured. Precious saffron threads dissolve into wild honey, resting on a foundation of creamy sandalwood. Light made tangible.", "ingredients": ["Saffron", "Wild Honey", "Sandalwood", "Vanilla Absolute", "Cardamom"] },
+    "pierre-et-mousse": { "subtitle": "Vetiver · Oakmoss · Wet Stone", "notes": "Mineral, grounding, meditative", "description": "Rain on ancient stone. Vetiver roots grip the earth while oakmoss softens every edge. A perfume that smells like stillness itself.", "ingredients": ["Vetiver", "Oakmoss", "Mineral Accord", "Cedar", "Bergamot"] },
+    "jardin-secret": { "subtitle": "Rose · Fig Leaf · Black Tea", "notes": "Intimate, lush, literary", "description": "A walled garden no one else knows about. Damask rose entwined with fig leaves, a cup of black tea cooling on the stone bench. Private beauty.", "ingredients": ["Damask Rose", "Fig Leaf", "Black Tea", "Peony", "Cashmere Wood"] },
+    "brume-de-mer": { "subtitle": "Sea Salt · Driftwood · Neroli", "notes": "Airy, coastal, serene", "description": "Mediterranean mist at first light. Sea salt crystals on sun-bleached driftwood, neroli blossoms carried by the breeze. Freedom in a bottle.", "ingredients": ["Sea Salt Accord", "Driftwood", "Neroli", "White Tea", "Ambergris"] },
+    "ambre-eternel": { "subtitle": "Amber · Labdanum · Vanilla", "notes": "Rich, resinous, timeless", "description": "Ancient resins warmed by skin. Pure amber and labdanum swirl into Madagascar vanilla, creating a scent that feels like it has always existed.", "ingredients": ["Amber", "Labdanum", "Madagascar Vanilla", "Myrrh", "Tonka Bean"] },
+    "feuille-verte": { "subtitle": "Basil · Galbanum · Lemon Verbena", "notes": "Fresh, herbaceous, luminous", "description": "An herb garden in late spring. Crushed basil and sharp galbanum cut through with sparkling lemon verbena. Clean energy, bottled.", "ingredients": ["Sweet Basil", "Galbanum", "Lemon Verbena", "Green Tea", "White Cedar"] }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "nav": { "shop": "Colecția", "about": "Povestea", "contact": "Contact" },
+  "hero": {
+    "tagline": "Parfumerie Artizanală",
+    "headline1": "Arta invizibilă",
+    "headline2": "a aromei",
+    "subtitle_lines": [
+      "Parfumuri artizanale. Difuzoare. Lumânări.",
+      "Fiecare compoziție se naște din ingrediente rare",
+      "și sensibilitatea unui parfumier format în Franța."
+    ],
+    "cta_discover": "Descoperă",
+    "cta_story": "Povestea Noastră"
+  },
+  "marquee": ["Oud", "Șofran", "Iris", "Chihlimbar", "Vetiver", "Neroli", "Trandafir", "Santal", "Frunză de Smochin", "Labdanum", "Tonka", "Bergamotă"],
+  "collection": {
+    "label": "Colecția",
+    "heading1": "Compoziții unice.",
+    "heading2": "Născute din pasiune.",
+    "view_all": "Vezi tot asortimentul",
+    "view_all_mobile": "Vezi tot asortimentul"
+  },
+  "manifesto": {
+    "quote_lines": ["Fiecare parfum e creat de o singură pereche de mâini.", "Aici mirosul devine poveste."],
+    "brand": "Aromo Atelier"
+  },
+  "atelier": {
+    "label": "Atelierul",
+    "heading1": "Unde materiile prime",
+    "heading2": "se transformă în amintiri",
+    "text": "Într-un studio liniștit din inima Chișinăului, fiecare parfum ia naștere manual, de la prima schiță până la ultimul flacon. Fără linii de producție. Fără compromisuri. Doar răbdare, intuiție și ingrediente de excepție.",
+    "cta": "Citește Povestea",
+    "appointment": "Vizite doar cu programare"
+  },
+  "shop": {
+    "label": "Colecția",
+    "heading": "Creațiile Noastre",
+    "back": "← Înapoi la Colecție",
+    "category_parfum": "Apă de Parfum",
+    "category_diffuser": "Difuzor",
+    "category_candle": "Lumânare",
+    "key_notes": "Note Dominante",
+    "add_to_cart": "Adaugă în Coș"
+  },
+  "about": {
+    "label": "Parfumierul",
+    "heading1": "Un artist al",
+    "heading2": "moleculelor invizibile",
+    "text1": "Într-un atelier liniștit din Chișinău, materiile prime capătă suflet. Elena a studiat arta parfumeriei în Franța, iar fiecare creație începe ca o intuiție: o imagine fugară, un loc pe jumătate uitat, o textură a luminii. Și devine, încet, ceva ce poți purta pe piele.",
+    "text2": "Aromo Atelier s-a născut din credința că parfumeria este o artă intimă, nu o industrie. Fiecare flacon este creat de mână, în tiraje mici, din ingrediente alese cu grijă de la cultivatori și distilatori care împart aceeași reverență față de lumea naturală.",
+    "text3": "Aici nu există campanii de masă și nici ambasadori celebri. Doar un parfumier, o colecție de materii prime extraordinare și răbdarea de a lăsa fiecare compoziție să-și găsească propriul adevăr.",
+    "location": "Chișinău, Moldova",
+    "appointment": "Vizite doar cu programare"
+  },
+  "contact": {
+    "label": "Contactează-ne",
+    "heading": "Scrie-ne",
+    "subtitle": "Pentru creații personalizate, colaborări sau pur și simplu pentru a face cunoștință.",
+    "address_label": "Adresa",
+    "address": "Str. Alexei Șciusev 64, Chișinău",
+    "appointment": "Vizite doar cu programare",
+    "email_label": "Email",
+    "email": "contact@aromo.md",
+    "phone_label": "Telefon",
+    "phone": "+373 XX XXX XXX",
+    "form_name": "Nume",
+    "form_name_placeholder": "Numele dvs.",
+    "form_email": "Email",
+    "form_email_placeholder": "email@exemplu.com",
+    "form_message": "Mesaj",
+    "form_message_placeholder": "Povestește-ne despre viziunea ta...",
+    "form_submit": "Trimite Mesajul",
+    "success_title": "Mulțumim.",
+    "success_text": "Revenim cu un răspuns în cel mai scurt timp."
+  },
+  "footer": { "copyright": "© 2026 Aromo Atelier · Chișinău, Moldova" },
+  "products": {
+    "fleur-sauvage": { "subtitle": "Iris Sălbatic · Frunză de Violetă · Mosc", "notes": "Delicat, pământiu, liber", "description": "Flori de câmp culese în zori, încă grele de rouă. Petalele de iris se deschid pe un pat de frunze de violetă și mosc curat. Un omagiu adus frumuseții neîmblânzite.", "ingredients": ["Iris Sălbatic", "Frunză de Violetă", "Mosc Alb", "Acord de Tulpină Verde", "Ambretă"] },
+    "noir-de-chisinau": { "subtitle": "Oud · Chihlimbar · Frunză de Tutun", "notes": "Profund, afumat, contemplativ", "description": "O plimbare la miezul nopții prin cartierul vechi. Oud-ul întunecat întâlnește tutunul uscat la soare, îmblânzit de o îmbrățișare caldă de chihlimbar. Pentru cei care poartă misterul ca pe o a doua piele.", "ingredients": ["Oud", "Chihlimbar", "Frunză de Tutun", "Benzoin", "Piper Negru"] },
+    "lumiere-doree": { "subtitle": "Șofran · Miere · Lemn de Santal", "notes": "Cald, auriu, învăluitor", "description": "Ora de aur, surprinsă într-un flacon. Fire prețioase de șofran se topesc în miere sălbatică, odihnindu-se pe un fundal de lemn de santal cremos. Lumină pe care o poți atinge.", "ingredients": ["Șofran", "Miere Sălbatică", "Lemn de Santal", "Absolut de Vanilie", "Cardamom"] },
+    "pierre-et-mousse": { "subtitle": "Vetiver · Mușchi de Stejar · Piatră Udă", "notes": "Mineral, ancorător, meditativ", "description": "Ploaie pe piatră străveche. Rădăcinile de vetiver se agață de pământ, iar mușchiul de stejar îmblânzește fiecare muchie. Un parfum care miroase a liniște pură.", "ingredients": ["Vetiver", "Mușchi de Stejar", "Acord Mineral", "Cedru", "Bergamotă"] },
+    "jardin-secret": { "subtitle": "Trandafir · Frunză de Smochin · Ceai Negru", "notes": "Intim, luxuriant, literar", "description": "O grădină cu ziduri înalte, pe care n-o știe nimeni. Trandafir de Damasc împletit cu frunze de smochin, o ceașcă de ceai negru răcindu-se pe banca de piatră. Frumusețe doar a ta.", "ingredients": ["Trandafir de Damasc", "Frunză de Smochin", "Ceai Negru", "Bujor", "Lemn de Cașmir"] },
+    "brume-de-mer": { "subtitle": "Sare de Mare · Lemn de Drift · Neroli", "notes": "Aerian, costier, senin", "description": "Ceață mediteraneană în prima lumină a zilei. Cristale de sare pe lemn albit de soare, flori de neroli purtate de briză. Libertate într-un flacon.", "ingredients": ["Acord de Sare de Mare", "Lemn de Drift", "Neroli", "Ceai Alb", "Ambră Cenușie"] },
+    "ambre-eternel": { "subtitle": "Chihlimbar · Labdanum · Vanilie", "notes": "Bogat, rășinos, atemporal", "description": "Rășini străvechi încălzite de piele. Chihlimbar pur și labdanum se contopesc cu vanilie din Madagascar, creând un parfum care pare că a existat dintotdeauna.", "ingredients": ["Chihlimbar", "Labdanum", "Vanilie din Madagascar", "Smirnă", "Boabe de Tonka"] },
+    "feuille-verte": { "subtitle": "Busuioc · Galbanum · Verbină de Lămâie", "notes": "Proaspăt, ierbos, luminos", "description": "O grădină de plante aromatice la sfârșitul primăverii. Busuioc zdrobit și galbanum ascuțit, străbătute de strălucirea verbinei de lămâie. Energie pură, îmbuteliată.", "ingredients": ["Busuioc Dulce", "Galbanum", "Verbină de Lămâie", "Ceai Verde", "Cedru Alb"] }
+  }
+}
