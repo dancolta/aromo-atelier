@@ -23,7 +23,7 @@ export function HeroBackground() {
       <div
         className="absolute inset-0 opacity-[0.60]"
         style={{
-          backgroundImage: "url('/hero-cover.png')",
+          backgroundImage: "url('/hero-cover.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -108,13 +108,6 @@ export function HeroBackground() {
         }}
       />
 
-      <style>{`
-        @keyframes orbDrift1 { 0%,100% { transform: translate(0,0) scale(1); } 33% { transform: translate(-4vw,5vh) scale(1.05); } 66% { transform: translate(3vw,-3vh) scale(0.97); } }
-        @keyframes orbDrift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(6vw,-4vh) scale(1.08); } }
-
-        @keyframes pollenFloat { 0%,100% { transform: translate(0,0); opacity:.4; } 33% { transform: translate(10px,-20px); opacity:.7; } 66% { transform: translate(-8px,-12px); opacity:.5; } }
-        @keyframes linePulse { 0%,100% { opacity:.2; transform: scaleX(.8); } 50% { opacity:.45; transform: scaleX(1); } }
-      `}</style>
     </div>
   );
 }

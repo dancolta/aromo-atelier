@@ -7,6 +7,7 @@ import { I18nProvider } from "@/lib/i18n/context";
 import { CartProvider } from "@/lib/cart-context";
 import { HtmlLang } from "@/components/html-lang";
 import { OrganizationJsonLd } from "@/components/json-ld";
+import { AddToCartToast } from "@/components/add-to-cart-toast";
 
 const bodoni = Bodoni_Moda({
   variable: "--font-bodoni",
@@ -78,6 +79,7 @@ export default function RootLayout({
           <HtmlLang />
           <CartProvider>
             <Navbar />
+            <AddToCartToast />
             <main id="main-content" className="flex-1">{children}</main>
             <Footer />
           </CartProvider>

@@ -19,7 +19,7 @@ export const products: Product[] = [
     description:
       "Wildflowers gathered at dawn, still heavy with dew. Iris petals unfold into a bed of violet leaves and clean musk. An ode to untamed beauty.",
     ingredients: ["Wild Iris", "Violet Leaf", "White Musk", "Green Stem Accord", "Ambrette"],
-    image: "/products/clear-bottle.png",
+    image: "/products/clear-bottle.jpg",
   },
   {
     slug: "noir-de-chisinau",
@@ -30,7 +30,7 @@ export const products: Product[] = [
     description:
       "A midnight walk through the old quarter. Dark oud meets sun-dried tobacco, softened by a warm amber embrace. For those who carry mystery like a second skin.",
     ingredients: ["Oud", "Amber", "Tobacco Leaf", "Benzoin", "Black Pepper"],
-    image: "/products/blue-candle.png",
+    image: "/products/blue-candle.jpg",
   },
   {
     slug: "brume-de-mer",
@@ -41,7 +41,7 @@ export const products: Product[] = [
     description:
       "Mediterranean mist at first light. Sea salt crystals on sun-bleached driftwood, neroli blossoms carried by the breeze. Freedom in a bottle.",
     ingredients: ["Sea Salt Accord", "Driftwood", "Neroli", "White Tea", "Ambergris"],
-    image: "/products/blue-bottle.png",
+    image: "/products/blue-bottle.jpg",
   },
   {
     slug: "ambre-eternel",
@@ -52,7 +52,7 @@ export const products: Product[] = [
     description:
       "Ancient resins warmed by skin. Pure amber and labdanum swirl into Madagascar vanilla, creating a scent that feels like it has always existed.",
     ingredients: ["Amber", "Labdanum", "Madagascar Vanilla", "Myrrh", "Tonka Bean"],
-    image: "/products/pink-candle.png",
+    image: "/products/pink-candle.jpg",
   },
   {
     slug: "feuille-verte",
@@ -63,6 +63,6 @@ export const products: Product[] = [
     description:
       "An herb garden in late spring. Crushed basil and sharp galbanum cut through with sparkling lemon verbena. Clean energy, bottled.",
     ingredients: ["Sweet Basil", "Galbanum", "Lemon Verbena", "Green Tea", "White Cedar"],
-    image: "/products/green-bottle.png",
+    image: "/products/green-bottle.jpg",
   },
 ];

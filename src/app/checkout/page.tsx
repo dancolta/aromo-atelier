@@ -11,10 +11,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 export default function CheckoutPage() {
-  const { items, totalPrice, clearCart } = useCart();
+  const { items, totalPrice, clearCart, updateQuantity, removeItem } = useCart();
   const { t } = useI18n();
   const router = useRouter();
-  const [summaryOpen, setSummaryOpen] = useState(false);
+  const [summaryOpen, setSummaryOpen] = useState(true);
 
   if (items.length === 0) {
     return (
@@ -48,6 +48,62 @@ export default function CheckoutPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12">
+          {/* Order summary — mobile: first, desktop: right column */}
+          <div className="lg:hidden order-first">
+            <button
+              onClick={() => setSummaryOpen(!summaryOpen)}
+              className="w-full flex items-center justify-between py-3 border-b border-dark-oud/10 mb-4"
+            >
+              <span className="text-[10px] tracking-[0.2em] uppercase text-warm-stone font-medium">
+                {t.checkout?.your_order || "Your Order"} ({items.length})
+              </span>
+              <div className="flex items-center gap-2">
+                <span className="font-serif text-sm text-deep-black">{totalPrice} MDL</span>
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" className={`transition-transform ${summaryOpen ? "rotate-180" : ""}`}>
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1" />
+                </svg>
+              </div>
+            </button>
+            {summaryOpen && (
+              <div className="mb-8">
+                <div className="space-y-4">
+                  {items.map((item) => (
+                    <div key={item.slug} className="flex gap-3 items-center">
+                      <div className="w-14 h-14 bg-soft-cream rounded-sm overflow-hidden relative shrink-0">
+                        <Image src={item.image} alt={item.name} fill className="object-cover" sizes="56px" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-serif text-sm text-deep-black">{item.name}</p>
+                        <div className="flex items-center gap-2 mt-1.5">
+                          <button
+                            onClick={() => item.quantity === 1 ? removeItem(item.slug) : updateQuantity(item.slug, item.quantity - 1)}
+                            aria-label={item.quantity === 1 ? "Remove" : "Decrease"}
+                            className="w-6 h-6 flex items-center justify-center border border-dark-oud/15 text-dark-oud text-[10px] hover:border-amber-gold transition-colors"
+                          >
+                            {item.quantity === 1 ? "×" : "−"}
+                          </button>
+                          <span className="text-[11px] text-deep-black w-3 text-center">{item.quantity}</span>
+                          <button
+                            onClick={() => updateQuantity(item.slug, item.quantity + 1)}
+                            aria-label="Increase"
+                            className="w-6 h-6 flex items-center justify-center border border-dark-oud/15 text-dark-oud text-[10px] hover:border-amber-gold transition-colors"
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+                      <p className="text-sm text-deep-black">{item.price * item.quantity} MDL</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="border-t border-dark-oud/10 mt-4 pt-3 flex justify-between">
+                  <span className="text-[11px] tracking-[0.1em] uppercase text-warm-stone">{t.cart?.subtotal || "Total"}</span>
+                  <span className="font-serif text-lg text-deep-black">{totalPrice} MDL</span>
+                </div>
+              </div>
+            )}
+          </div>
+
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Delivery details */}
@@ -97,37 +153,37 @@ export default function CheckoutPage() {
             </button>
           </form>
 
-          {/* Order summary */}
-          <div>
-            {/* Mobile toggle */}
-            <button
-              onClick={() => setSummaryOpen(!summaryOpen)}
-              className="lg:hidden w-full flex items-center justify-between py-3 border-b border-dark-oud/10 mb-4"
-            >
-              <span className="text-[10px] tracking-[0.2em] uppercase text-warm-stone font-medium">
-                {t.checkout?.your_order || "Your Order"} ({items.length})
-              </span>
-              <div className="flex items-center gap-2">
-                <span className="font-serif text-sm text-deep-black">{totalPrice} MDL</span>
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" className={`transition-transform ${summaryOpen ? "rotate-180" : ""}`}>
-                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1" />
-                </svg>
-              </div>
-            </button>
-
-            <div className={`${summaryOpen ? "block" : "hidden"} lg:block`}>
-              <p className="hidden lg:block text-[10px] tracking-[0.2em] uppercase text-warm-stone font-medium mb-6">
+          {/* Order summary — desktop only (mobile version is above) */}
+          <div className="hidden lg:block">
+            <div>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-warm-stone font-medium mb-6">
                 {t.checkout?.your_order || "Your Order"}
               </p>
               <div className="space-y-4">
                 {items.map((item) => (
-                  <div key={item.slug} className="flex gap-3">
+                  <div key={item.slug} className="flex gap-3 items-center">
                     <div className="w-14 h-14 bg-soft-cream rounded-sm overflow-hidden relative shrink-0">
                       <Image src={item.image} alt={item.name} fill className="object-cover" sizes="56px" />
                     </div>
                     <div className="flex-1">
                       <p className="font-serif text-sm text-deep-black">{item.name}</p>
-                      <p className="text-[11px] text-warm-stone">× {item.quantity}</p>
+                      <div className="flex items-center gap-2 mt-1.5">
+                        <button
+                          onClick={() => item.quantity === 1 ? removeItem(item.slug) : updateQuantity(item.slug, item.quantity - 1)}
+                          aria-label={item.quantity === 1 ? "Remove" : "Decrease"}
+                          className="w-6 h-6 flex items-center justify-center border border-dark-oud/15 text-dark-oud text-[10px] hover:border-amber-gold transition-colors"
+                        >
+                          {item.quantity === 1 ? "×" : "−"}
+                        </button>
+                        <span className="text-[11px] text-deep-black w-3 text-center">{item.quantity}</span>
+                        <button
+                          onClick={() => updateQuantity(item.slug, item.quantity + 1)}
+                          aria-label="Increase"
+                          className="w-6 h-6 flex items-center justify-center border border-dark-oud/15 text-dark-oud text-[10px] hover:border-amber-gold transition-colors"
+                        >
+                          +
+                        </button>
+                      </div>
                     </div>
                     <p className="text-sm text-deep-black">{item.price * item.quantity} MDL</p>
                   </div>
