@@ -16,6 +16,7 @@ export default function AboutPage() {
             fill
             priority
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 896px"
           />
         </div>
 
@@ -23,7 +24,7 @@ export default function AboutPage() {
           <p className="text-[9px] tracking-[0.28em] uppercase text-warm-stone font-medium mb-4">
             {t.about.label}
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl font-light tracking-wide text-deep-black mb-10">
+          <h1 className="font-serif text-4xl md:text-5xl font-normal tracking-wide text-deep-black mb-10">
             {t.about.heading1}
             <br />
             {t.about.heading2}

@@ -19,7 +19,7 @@ export const products: Product[] = [
     description:
       "Wildflowers gathered at dawn, still heavy with dew. Iris petals unfold into a bed of violet leaves and clean musk. An ode to untamed beauty.",
     ingredients: ["Wild Iris", "Violet Leaf", "White Musk", "Green Stem Accord", "Ambrette"],
-    image: "/products/product-2.png",
+    image: "/products/clear-bottle.png",
   },
   {
     slug: "noir-de-chisinau",
@@ -30,40 +30,7 @@ export const products: Product[] = [
     description:
       "A midnight walk through the old quarter. Dark oud meets sun-dried tobacco, softened by a warm amber embrace. For those who carry mystery like a second skin.",
     ingredients: ["Oud", "Amber", "Tobacco Leaf", "Benzoin", "Black Pepper"],
-    image: "/products/product-1.png",
-  },
-  {
-    slug: "lumiere-doree",
-    name: "Lumière Dorée",
-    subtitle: "Saffron · Honey · Sandalwood",
-    notes: "Warm, golden, enveloping",
-    price: 750,
-    description:
-      "Golden hour, captured. Precious saffron threads dissolve into wild honey, resting on a foundation of creamy sandalwood. Light made tangible.",
-    ingredients: ["Saffron", "Wild Honey", "Sandalwood", "Vanilla Absolute", "Cardamom"],
-    image: "/products/product-2.png",
-  },
-  {
-    slug: "pierre-et-mousse",
-    name: "Pierre et Mousse",
-    subtitle: "Vetiver · Oakmoss · Wet Stone",
-    notes: "Mineral, grounding, meditative",
-    price: 590,
-    description:
-      "Rain on ancient stone. Vetiver roots grip the earth while oakmoss softens every edge. A perfume that smells like stillness itself.",
-    ingredients: ["Vetiver", "Oakmoss", "Mineral Accord", "Cedar", "Bergamot"],
-    image: "/products/product-1.png",
-  },
-  {
-    slug: "jardin-secret",
-    name: "Jardin Secret",
-    subtitle: "Rose · Fig Leaf · Black Tea",
-    notes: "Intimate, lush, literary",
-    price: 620,
-    description:
-      "A walled garden no one else knows about. Damask rose entwined with fig leaves, a cup of black tea cooling on the stone bench. Private beauty.",
-    ingredients: ["Damask Rose", "Fig Leaf", "Black Tea", "Peony", "Cashmere Wood"],
-    image: "/products/product-2.png",
+    image: "/products/blue-candle.png",
   },
   {
     slug: "brume-de-mer",
@@ -74,7 +41,7 @@ export const products: Product[] = [
     description:
       "Mediterranean mist at first light. Sea salt crystals on sun-bleached driftwood, neroli blossoms carried by the breeze. Freedom in a bottle.",
     ingredients: ["Sea Salt Accord", "Driftwood", "Neroli", "White Tea", "Ambergris"],
-    image: "/products/product-1.png",
+    image: "/products/blue-bottle.png",
   },
   {
     slug: "ambre-eternel",
@@ -85,7 +52,7 @@ export const products: Product[] = [
     description:
       "Ancient resins warmed by skin. Pure amber and labdanum swirl into Madagascar vanilla, creating a scent that feels like it has always existed.",
     ingredients: ["Amber", "Labdanum", "Madagascar Vanilla", "Myrrh", "Tonka Bean"],
-    image: "/products/product-2.png",
+    image: "/products/pink-candle.png",
   },
   {
     slug: "feuille-verte",
@@ -96,6 +63,6 @@ export const products: Product[] = [
     description:
       "An herb garden in late spring. Crushed basil and sharp galbanum cut through with sparkling lemon verbena. Clean energy, bottled.",
     ingredients: ["Sweet Basil", "Galbanum", "Lemon Verbena", "Green Tea", "White Cedar"],
-    image: "/products/product-1.png",
+    image: "/products/green-bottle.png",
   },
 ];

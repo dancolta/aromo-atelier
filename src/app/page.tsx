@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { products } from "@/lib/products";
 import { HeroBackground } from "@/components/hero-background";
 import { useI18n } from "@/lib/i18n/context";
 import { useLocalizedProduct } from "@/lib/use-product";
+import { useCart } from "@/lib/cart-context";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 export default function Home() {
   const { t } = useI18n();
@@ -30,11 +33,10 @@ export default function Home() {
 
             <h1
               className="font-serif text-3xl md:text-5xl lg:text-6xl font-normal leading-[1.1] tracking-[0.06em] uppercase text-warm-linen animate-fade-in-up animate-delay-100"
-              style={{ textShadow: "0 0 80px rgba(201,168,124,0.15)" }}
+              style={{ textShadow: "0 0 80px rgba(154,139,181,0.20)" }}
             >
               {t.hero.headline1}
-              <br />
-              {t.hero.headline2}
+              {t.hero.headline2 && <><br />{t.hero.headline2}</>}
             </h1>
 
             <div className="text-[15px] text-soft-cream/55 font-light leading-[1.9] mt-8 max-w-md animate-fade-in-up animate-delay-200 flex flex-col items-center">
@@ -86,6 +88,7 @@ export default function Home() {
       {/* Featured products */}
       <section className="py-24 px-6 bg-warm-linen">
         <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
           <div className="flex items-end justify-between mb-16">
             <div>
               <p className="text-[9px] tracking-[0.28em] uppercase text-warm-stone font-medium mb-3">
@@ -104,7 +107,9 @@ export default function Home() {
               {t.collection.view_all}
             </Link>
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal delay={150}>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {products.slice(0, 4).map((product) => (
               <HomeProductCard key={product.slug} product={product} />
@@ -119,14 +124,23 @@ export default function Home() {
               {t.collection.view_all_mobile}
             </Link>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Manifesto */}
-      <section className="py-28 px-6 bg-deep-black text-warm-linen relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-amber-gold/5 blur-[100px] rounded-full" />
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <p className="font-serif text-2xl md:text-[32px] font-light leading-[1.6] tracking-[0.02em] italic text-soft-cream/90 flex flex-col">
+      <section
+        className="py-28 px-6 text-warm-linen relative"
+        style={{
+          backgroundImage: "url('/manifesto-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-deep-black/75" />
+        <ScrollReveal className="max-w-3xl mx-auto text-center relative z-10">
+          <p className="font-serif text-2xl md:text-[32px] font-normal leading-[1.6] tracking-[0.02em] italic text-soft-cream/90 flex flex-col">
             {t.manifesto.quote_lines.map((line, i) => (
               <span key={i}>
                 {i === 0 && <>&ldquo;</>}{line}{i === t.manifesto.quote_lines.length - 1 && <>&rdquo;</>}
@@ -140,12 +154,13 @@ export default function Home() {
             </span>
             <span className="block w-12 h-px bg-amber-gold/30" />
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Atelier story */}
       <section className="py-24 px-6 bg-warm-linen">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <ScrollReveal className="order-2 md:order-1">
           <div className="aspect-[4/5] relative rounded-sm overflow-hidden bg-soft-cream">
             <Image
               src="/products/atelier.jpg"
@@ -155,11 +170,13 @@ export default function Home() {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
+          </ScrollReveal>
+          <ScrollReveal delay={200} className="order-1 md:order-2">
           <div>
             <p className="text-[9px] tracking-[0.28em] uppercase text-warm-stone font-medium mb-4">
               {t.atelier.label}
             </p>
-            <h2 className="font-serif text-2xl md:text-3xl font-light text-deep-black tracking-wide leading-snug">
+            <h2 className="font-serif text-2xl md:text-3xl font-normal text-deep-black tracking-wide leading-snug">
               {t.atelier.heading1}
               <br />
               {t.atelier.heading2}
@@ -177,6 +194,7 @@ export default function Home() {
               {t.atelier.cta}
             </Link>
           </div>
+          </ScrollReveal>
         </div>
       </section>
     </>
@@ -185,6 +203,18 @@ export default function Home() {
 
 function HomeProductCard({ product }: { product: import("@/lib/products").Product }) {
   const p = useLocalizedProduct(product);
+  const { addItem } = useCart();
+  const { t } = useI18n();
+  const [added, setAdded] = useState(false);
+
+  function handleAdd(e: React.MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+    addItem({ slug: p.slug, name: p.name, price: p.price, image: p.image });
+    setAdded(true);
+    setTimeout(() => setAdded(false), 1500);
+  }
+
   return (
     <Link href={`/shop/${p.slug}`} className="group">
       <div className="aspect-[3/4] rounded-sm overflow-hidden mb-4 relative bg-soft-cream">
@@ -192,11 +222,22 @@ function HomeProductCard({ product }: { product: import("@/lib/products").Produc
           src={p.image}
           alt={p.name}
           fill
-          className="object-cover group-hover:scale-[1.04] transition-transform duration-700"
+          className="object-cover group-hover:scale-[1.04] group-hover:brightness-[0.8] transition-all duration-700"
           sizes="(max-width: 640px) 50vw, 25vw"
         />
+        <button
+          onClick={handleAdd}
+          aria-label={t.shop?.add_to_cart || "Add to Cart"}
+          className={`absolute bottom-3 left-3 right-3 py-2.5 text-[10px] tracking-[0.15em] uppercase text-center transition-all duration-300 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 focus:opacity-100 focus:translate-y-0 ${
+            added
+              ? "bg-sage-teal text-warm-linen"
+              : "bg-dark-oud/90 text-warm-linen hover:bg-amber-gold"
+          }`}
+        >
+          {added ? "✓" : (t.shop?.add_to_cart || "Add to Cart")}
+        </button>
       </div>
-      <h3 className="font-serif text-[15px] font-light tracking-wide text-deep-black group-hover:text-amber-gold transition-colors duration-300">
+      <h3 className="font-serif text-[15px] font-normal tracking-wide text-deep-black group-hover:text-amber-gold transition-colors duration-300">
         {p.name}
       </h3>
       <p className="text-[11px] tracking-[0.04em] text-warm-stone/60 mt-1">

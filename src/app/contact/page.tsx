@@ -24,7 +24,7 @@ export default function ContactPage() {
           <p className="text-[9px] tracking-[0.28em] uppercase text-warm-stone font-medium mb-3">
             {t.contact.label}
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl font-light tracking-wide text-deep-black mb-4">
+          <h1 className="font-serif text-4xl md:text-5xl font-normal tracking-wide text-deep-black mb-4">
             {t.contact.heading}
           </h1>
           <p className="text-[14px] text-warm-stone font-light">
@@ -90,7 +90,7 @@ export default function ContactPage() {
           <div>
             {submitted ? (
               <div className="py-16 text-center">
-                <p className="font-serif text-2xl font-light text-deep-black mb-3">
+                <p className="font-serif text-2xl font-normal text-deep-black mb-3">
                   {t.contact.success_title}
                 </p>
                 <p className="text-[14px] text-warm-stone font-light">

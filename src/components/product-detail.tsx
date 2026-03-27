@@ -4,10 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { products } from "@/lib/products";
+import { useState } from "react";
 import { useI18n } from "@/lib/i18n/context";
 import { useLocalizedProduct } from "@/lib/use-product";
+import { useCart } from "@/lib/cart-context";
 
 export function ProductDetail({ slug }: { slug: string }) {
+  const [added, setAdded] = useState(false);
+  const { addItem } = useCart();
   const { t } = useI18n();
   const baseProduct = products.find((p) => p.slug === slug);
   if (!baseProduct) notFound();
@@ -39,7 +43,7 @@ export function ProductDetail({ slug }: { slug: string }) {
             <p className="text-[9px] tracking-[0.28em] uppercase text-warm-stone font-medium mb-3">
               {t.shop.category_parfum}
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl font-light tracking-wide text-deep-black">
+            <h1 className="font-serif text-4xl md:text-5xl font-normal tracking-wide text-deep-black">
               {product.name}
             </h1>
             <p className="text-[13px] tracking-[0.05em] text-amber-gold mt-2">
@@ -69,11 +73,22 @@ export function ProductDetail({ slug }: { slug: string }) {
             </div>
 
             <div className="mt-10 flex items-center gap-8">
-              <span className="font-serif text-2xl font-light text-deep-black">
+              <span className="font-serif text-2xl font-normal text-deep-black">
                 {product.price} MDL
               </span>
-              <button className="px-8 py-3 bg-dark-oud text-warm-linen text-[11px] tracking-[0.15em] uppercase hover:bg-amber-gold transition-colors duration-300">
-                {t.shop.add_to_cart}
+              <button
+                onClick={() => {
+                  addItem({ slug: product.slug, name: product.name, price: product.price, image: product.image });
+                  setAdded(true);
+                  setTimeout(() => setAdded(false), 1500);
+                }}
+                className={`px-8 py-3 text-[11px] tracking-[0.15em] uppercase transition-colors duration-300 ${
+                  added
+                    ? "bg-sage-teal text-warm-linen"
+                    : "bg-dark-oud text-warm-linen hover:bg-amber-gold"
+                }`}
+              >
+                {added ? (t.cart?.added || "✓ Added") : t.shop.add_to_cart}
               </button>
             </div>
           </div>

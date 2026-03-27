@@ -6,7 +6,7 @@ import type { Locale } from "@/lib/i18n/locales";
 
 const locales: Locale[] = ["ro", "ru", "en"];
 
-export function LanguageSwitcher({ solid }: { solid: boolean }) {
+export function LanguageSwitcher({ solid, openUp = false }: { solid: boolean; openUp?: boolean }) {
   const { locale, setLocale } = useI18n();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -44,7 +44,7 @@ export function LanguageSwitcher({ solid }: { solid: boolean }) {
       </button>
 
       {open && (
-        <div className="absolute top-full right-0 mt-2 bg-warm-linen border border-dark-oud/10 rounded-sm shadow-lg overflow-hidden min-w-[52px]">
+        <div className={`absolute ${openUp ? "bottom-full mb-2" : "top-full mt-2"} left-0 bg-warm-linen border border-dark-oud/10 rounded-sm shadow-lg overflow-hidden min-w-[52px] z-50`}>
           {locales.map((l) => (
             <button
               key={l}

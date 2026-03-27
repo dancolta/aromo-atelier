@@ -1,9 +1,9 @@
 {
-  "nav": { "shop": "Shop", "about": "About", "contact": "Contact" },
+  "nav": { "home": "Home", "shop": "Shop", "about": "About", "contact": "Contact" },
   "hero": {
     "tagline": "Artisan Perfumery",
-    "headline1": "The invisible art",
-    "headline2": "of aroma",
+    "headline1": "Handmade scents",
+    "headline2": "",
     "subtitle_lines": [
       "Artisan perfumes. Diffusers. Candles.",
       "Each composition brought to life from rare ingredients",
@@ -62,7 +62,7 @@
     "email_label": "Email",
     "email": "contact@aromo.md",
     "phone_label": "Phone",
-    "phone": "+373 XX XXX XXX",
+    "phone": "+373 (79) 112233",
     "form_name": "Name",
     "form_name_placeholder": "Your name",
     "form_email": "Email",
@@ -74,12 +74,40 @@
     "success_text": "We'll be in touch soon."
   },
   "footer": { "copyright": "© 2026 Aromo Atelier · Chișinău, Moldova" },
+  "cart": {
+    "title": "Your Selection",
+    "item": "item",
+    "items": "items",
+    "empty": "Your selection is empty",
+    "browse": "Browse Collection",
+    "subtotal": "Subtotal",
+    "checkout": "Proceed to Checkout",
+    "added": "Added"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "your_order": "Your Order",
+    "delivery_label": "Delivery Details",
+    "full_name": "Full Name",
+    "phone": "Phone",
+    "city": "City",
+    "address": "Address",
+    "notes": "Notes (optional)",
+    "notes_placeholder": "Apartment, entrance code, delivery notes...",
+    "payment_title": "Pay upon delivery",
+    "delivery_note": "Delivery: Complimentary",
+    "place_order": "Confirm Order"
+  },
+  "confirmation": {
+    "subtitle": "Order Placed",
+    "title": "Thank you",
+    "message": "We will contact you as soon as possible to confirm your order.",
+    "continue": "Continue Exploring",
+    "our_story": "Discover Our Story"
+  },
   "products": {
     "fleur-sauvage": { "subtitle": "Wild Iris · Violet Leaf · Musk", "notes": "Delicate, earthy, free-spirited", "description": "Wildflowers gathered at dawn, still heavy with dew. Iris petals unfold into a bed of violet leaves and clean musk. An ode to untamed beauty.", "ingredients": ["Wild Iris", "Violet Leaf", "White Musk", "Green Stem Accord", "Ambrette"] },
     "noir-de-chisinau": { "subtitle": "Oud · Amber · Tobacco Leaf", "notes": "Deep, smoky, contemplative", "description": "A midnight walk through the old quarter. Dark oud meets sun-dried tobacco, softened by a warm amber embrace. For those who carry mystery like a second skin.", "ingredients": ["Oud", "Amber", "Tobacco Leaf", "Benzoin", "Black Pepper"] },
-    "lumiere-doree": { "subtitle": "Saffron · Honey · Sandalwood", "notes": "Warm, golden, enveloping", "description": "Golden hour, captured. Precious saffron threads dissolve into wild honey, resting on a foundation of creamy sandalwood. Light made tangible.", "ingredients": ["Saffron", "Wild Honey", "Sandalwood", "Vanilla Absolute", "Cardamom"] },
-    "pierre-et-mousse": { "subtitle": "Vetiver · Oakmoss · Wet Stone", "notes": "Mineral, grounding, meditative", "description": "Rain on ancient stone. Vetiver roots grip the earth while oakmoss softens every edge. A perfume that smells like stillness itself.", "ingredients": ["Vetiver", "Oakmoss", "Mineral Accord", "Cedar", "Bergamot"] },
-    "jardin-secret": { "subtitle": "Rose · Fig Leaf · Black Tea", "notes": "Intimate, lush, literary", "description": "A walled garden no one else knows about. Damask rose entwined with fig leaves, a cup of black tea cooling on the stone bench. Private beauty.", "ingredients": ["Damask Rose", "Fig Leaf", "Black Tea", "Peony", "Cashmere Wood"] },
     "brume-de-mer": { "subtitle": "Sea Salt · Driftwood · Neroli", "notes": "Airy, coastal, serene", "description": "Mediterranean mist at first light. Sea salt crystals on sun-bleached driftwood, neroli blossoms carried by the breeze. Freedom in a bottle.", "ingredients": ["Sea Salt Accord", "Driftwood", "Neroli", "White Tea", "Ambergris"] },
     "ambre-eternel": { "subtitle": "Amber · Labdanum · Vanilla", "notes": "Rich, resinous, timeless", "description": "Ancient resins warmed by skin. Pure amber and labdanum swirl into Madagascar vanilla, creating a scent that feels like it has always existed.", "ingredients": ["Amber", "Labdanum", "Madagascar Vanilla", "Myrrh", "Tonka Bean"] },
     "feuille-verte": { "subtitle": "Basil · Galbanum · Lemon Verbena", "notes": "Fresh, herbaceous, luminous", "description": "An herb garden in late spring. Crushed basil and sharp galbanum cut through with sparkling lemon verbena. Clean energy, bottled.", "ingredients": ["Sweet Basil", "Galbanum", "Lemon Verbena", "Green Tea", "White Cedar"] }

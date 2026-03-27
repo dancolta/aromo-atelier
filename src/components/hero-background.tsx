@@ -21,9 +21,9 @@ export function HeroBackground() {
     <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
       {/* Studio photo — subtle background texture */}
       <div
-        className="absolute inset-0 opacity-[0.45]"
+        className="absolute inset-0 opacity-[0.60]"
         style={{
-          backgroundImage: "url('/hero-studio.jpg')",
+          backgroundImage: "url('/hero-cover.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -33,7 +33,7 @@ export function HeroBackground() {
       <div
         className="absolute inset-0"
         style={{
-          background: "radial-gradient(ellipse at 15% 85%, rgba(61,46,28,0.77) 0%, rgba(26,23,20,0.87) 50%)",
+          background: "radial-gradient(ellipse at 15% 85%, rgba(59,58,74,0.83) 0%, rgba(30,29,40,0.93) 50%)",
         }}
       />
 
@@ -51,7 +51,7 @@ export function HeroBackground() {
         style={{
           width: "50vw", height: "50vw", maxWidth: "700px", maxHeight: "700px",
           top: "10%", right: "-5%",
-          background: "radial-gradient(circle, rgba(201,168,124,0.28) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(154,139,181,0.28) 0%, transparent 65%)",
           filter: "blur(80px)",
           animation: anim("orbDrift1", "25s"),
         }}
@@ -74,14 +74,17 @@ export function HeroBackground() {
         { x: "18%", y: "30%", size: 2.5, dur: "20s", delay: "1s" },
         { x: "70%", y: "60%", size: 2, dur: "24s", delay: "3s" },
         { x: "45%", y: "20%", size: 1.5, dur: "18s", delay: "5s" },
+        { x: "82%", y: "35%", size: 2, dur: "22s", delay: "2s" },
+        { x: "30%", y: "75%", size: 1.8, dur: "26s", delay: "4s" },
+        { x: "58%", y: "45%", size: 2.2, dur: "19s", delay: "6s" },
       ].map((p, i) => (
         <div
           key={i}
           className="absolute rounded-full will-change-transform"
           style={{
             width: p.size, height: p.size, left: p.x, top: p.y,
-            background: "rgba(201,168,124,0.6)",
-            boxShadow: "0 0 8px rgba(201,168,124,0.25)",
+            background: "rgba(154,139,181,0.6)",
+            boxShadow: "0 0 8px rgba(154,139,181,0.25)",
             animation: reducedMotion ? "none" : `pollenFloat ${p.dur} ${p.delay} ease-in-out infinite`,
           }}
         />
@@ -91,7 +94,7 @@ export function HeroBackground() {
       <div
         className="absolute inset-0"
         style={{
-          background: "radial-gradient(ellipse at 40% 50%, transparent 25%, rgba(26,23,20,0.55) 100%)",
+          background: "radial-gradient(ellipse at 40% 50%, transparent 25%, rgba(30,29,40,0.55) 100%)",
         }}
       />
 
@@ -100,7 +103,7 @@ export function HeroBackground() {
         className="absolute bottom-[15%] left-[6%] h-px"
         style={{
           width: "20vw", maxWidth: "250px",
-          background: "linear-gradient(90deg, transparent, rgba(201,168,124,0.45), transparent)",
+          background: "linear-gradient(90deg, transparent, rgba(154,139,181,0.45), transparent)",
           animation: anim("linePulse", "8s"),
         }}
       />
