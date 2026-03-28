@@ -25,7 +25,7 @@ export function LanguageSwitcher({ solid, openUp = false }: { solid: boolean; op
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className={`text-[11px] tracking-[0.08em] uppercase transition-colors duration-300 flex items-center gap-1 ${
+        className={`text-[11px] tracking-[0.08em] uppercase transition-colors duration-300 flex items-center gap-1 cursor-pointer ${
           solid
             ? "text-dark-oud hover:text-amber-gold"
             : "text-warm-linen/70 hover:text-warm-linen"
@@ -52,7 +52,7 @@ export function LanguageSwitcher({ solid, openUp = false }: { solid: boolean; op
                 setLocale(l);
                 setOpen(false);
               }}
-              className={`block w-full px-4 py-2 text-[11px] tracking-[0.08em] uppercase text-left transition-colors ${
+              className={`block w-full px-4 py-2 text-[11px] tracking-[0.08em] uppercase text-left cursor-pointer transition-colors ${
                 locale === l
                   ? "text-dark-oud font-medium bg-soft-cream/50"
                   : "text-warm-stone hover:text-dark-oud hover:bg-soft-cream/30"

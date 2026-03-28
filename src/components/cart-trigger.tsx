@@ -9,7 +9,7 @@ export function CartTrigger({ solid, onClick }: { solid: boolean; onClick: () =>
     <button
       onClick={onClick}
       aria-label={`Cart, ${itemCount} items`}
-      className="relative p-2 group"
+      className="relative p-2 group cursor-pointer"
     >
       <svg
         width="20"

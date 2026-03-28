@@ -130,6 +130,7 @@ export default function Home() {
 
       {/* Manifesto */}
       <section
+        id="manifesto"
         className="py-28 px-6 text-warm-linen relative"
         style={{
           backgroundImage: "url('/manifesto-bg.jpg')",
@@ -228,7 +229,7 @@ function HomeProductCard({ product }: { product: import("@/lib/products").Produc
         <button
           onClick={handleAdd}
           aria-label={t.shop?.add_to_cart || "Add to Cart"}
-          className={`absolute bottom-3 left-3 right-3 py-2.5 text-[10px] tracking-[0.15em] uppercase text-center transition-all duration-300 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 focus:opacity-100 focus:translate-y-0 ${
+          className={`absolute bottom-3 left-3 right-3 py-2.5 text-[10px] tracking-[0.15em] uppercase text-center cursor-pointer transition-all duration-300 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 focus:opacity-100 focus:translate-y-0 ${
             added
               ? "bg-sage-teal text-warm-linen"
               : "bg-dark-oud/90 text-warm-linen hover:bg-amber-gold"

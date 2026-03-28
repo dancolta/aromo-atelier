@@ -22,7 +22,7 @@ export function Footer() {
           </svg>
         </a>
         <p className="text-[10px] tracking-[0.06em] text-warm-stone/50 text-center">
-          © 2026 Aromo Atelier · Str. Alexei Șciusev 64, Chișinău, Moldova
+          © 2026 Aromo Atelier · Alexei Șciusev 64, Chișinău, Moldova
         </p>
       </div>
     </footer>

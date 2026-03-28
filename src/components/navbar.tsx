@@ -14,6 +14,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [overDark, setOverDark] = useState(false);
   const [mobileHidden, setMobileHidden] = useState(false);
   const lastScrollY = useRef(0);
   const pathname = usePathname();
@@ -30,6 +31,15 @@ export function Navbar() {
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > window.innerHeight - 96);
+
+      // Check if navbar overlaps the manifesto (dark) section
+      const manifesto = document.getElementById("manifesto");
+      if (manifesto) {
+        const rect = manifesto.getBoundingClientRect();
+        setOverDark(rect.top < 96 && rect.bottom > 0);
+      } else {
+        setOverDark(false);
+      }
 
       // Hide on scroll down, show on scroll up (mobile only)
       if (y > lastScrollY.current && y > 100) {
@@ -50,7 +60,9 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         solid
-          ? "bg-warm-linen/70 backdrop-blur-md border-b border-dark-oud/10"
+          ? overDark
+            ? "bg-warm-linen backdrop-blur-md border-b border-dark-oud/10"
+            : "bg-warm-linen/70 backdrop-blur-md border-b border-dark-oud/10"
           : "bg-transparent"
       } ${mobileHidden ? "md:translate-y-0 -translate-y-full" : "translate-y-0"}`}
     >
