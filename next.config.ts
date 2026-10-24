@@ -1,41 +1,17 @@
 import type { NextConfig } from "next";
 
+// Static export for GitHub Pages. BASE_PATH is set by the Pages workflow (e.g. "/aromo-atelier").
 const nextConfig: NextConfig = {
-  images: {
-    formats: ["image/avif", "image/webp"],
+  output: "export",
+  basePath: process.env.BASE_PATH || "",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: process.env.BASE_PATH || "",
   },
-  headers: async () => [
-    {
-      source: "/products/:path*",
-      headers: [
-        { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-      ],
-    },
-    {
-      source: "/logo.png",
-      headers: [
-        { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-      ],
-    },
-    {
-      source: "/hero-cover.png",
-      headers: [
-        { key: "Cache-Control", value: "public, max-age=2592000" },
-      ],
-    },
-    {
-      source: "/manifesto-bg.jpg",
-      headers: [
-        { key: "Cache-Control", value: "public, max-age=2592000" },
-      ],
-    },
-    {
-      source: "/favicon.ico",
-      headers: [
-        { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-      ],
-    },
-  ],
+  trailingSlash: true,
+  images: {
+    loader: "custom",
+    loaderFile: "./src/lib/image-loader.ts",
+  },
 };
 
 export default nextConfig;

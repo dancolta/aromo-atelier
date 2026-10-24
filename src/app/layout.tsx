@@ -47,10 +47,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
-      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+      { url: `${process.env.NEXT_PUBLIC_BASE_PATH}/favicon.ico`, sizes: "32x32" },
+      { url: `${process.env.NEXT_PUBLIC_BASE_PATH}/icon.png`, type: "image/png", sizes: "192x192" },
     ],
-    apple: "/apple-icon.png",
+    apple: `${process.env.NEXT_PUBLIC_BASE_PATH}/apple-icon.png`,
   },
   alternates: {
     languages: {

@@ -133,7 +133,7 @@ export default function Home() {
         id="manifesto"
         className="py-28 px-6 text-warm-linen relative"
         style={{
-          backgroundImage: "url('/manifesto-bg.jpg')",
+          backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH}/manifesto-bg.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",

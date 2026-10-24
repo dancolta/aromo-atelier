@@ -23,7 +23,7 @@ export function HeroBackground() {
       <div
         className="absolute inset-0 opacity-[0.60]"
         style={{
-          backgroundImage: "url('/hero-cover.jpg')",
+          backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH}/hero-cover.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
